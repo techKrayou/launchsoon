@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en" class="h-full"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KRAYOU — The Next Wave of Shopping is Social</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Syne:wght@700;800;900&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              olive: '#556b2f',
+              terracotta: '#ad5a1f',
+              ember: '#e06a1b',
+              emberHover: '#c75912',
+              cream: '#FAF8F5',
+              sand: '#F3EFEA',
+              card: '#FFFFFF',
+              charcoal: '#141413',
+              graphite: '#262522',
+              muted: '#716D66'
+            }
+          },
+          fontFamily: {
+            editorial: ['Syne', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace']
+          },
+          boxShadow: {
+            'premium': '0 24px 50px -12px rgba(20, 20, 19, 0.12), 0 8px 24px -4px rgba(224, 106, 27, 0.08)',
+            'floating': '0 18px 36px -8px rgba(0,0,0,0.22), 0 0 1px 1px rgba(255,255,255,0.15)',
+            'glow': '0 0 40px -10px rgba(224, 106, 27, 0.35)'
+          },
+          keyframes: {
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' }
+            },
+            floatReverse: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(6px)' }
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+              '50%': { opacity: '0.7', transform: 'scale(1.15)' }
+            }
+          },
+          animation: {
+            'float': 'floatSlow 6s ease-in-out infinite',
+            'float-rev': 'floatReverse 5s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 2.5s ease-in-out infinite'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Strictly single viewport desktop lock */
+    @media (min-width: 1024px) {
+      body, html {
+        height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
+      }
+    }
+    
+    .noise-bg {
+      background-image: radial-gradient(rgba(85, 107, 47, 0.04) 1px, transparent 0), radial-gradient(rgba(224, 106, 27, 0.04) 1px, transparent 0);
+      background-size: 28px 28px;
+      background-position: 0 0, 14px 14px;
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(224, 106, 27, 0.12);
+    }
+    
+    .pill-tag {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-brand-charcoal font-sans h-full flex flex-col justify-between selection:bg-brand-ember selection:text-white noise-bg antialiased relative">
+
+  <!-- Ambient Glow Blobs in Brand Colors -->
+  <div class="pointer-events-none absolute -top-32 -left-32 w-96 h-96 bg-brand-olive/10 rounded-full blur-3xl -z-10"></div>
+  <div class="pointer-events-none absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-brand-ember/10 rounded-full blur-3xl -z-10"></div>
+  <div class="pointer-events-none absolute top-1/3 right-10 w-80 h-80 bg-brand-terracotta/10 rounded-full blur-3xl -z-10"></div>
+
+  <!-- TOP HEADER -->
+  <header class="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-5 pb-3 flex items-center justify-between shrink-0 z-20">
+    <!-- EXACT SVG LOGO AS PROVIDED (Document 1) -->
+    <a href="#" class="inline-flex items-center group transition-transform duration-200 hover:scale-[1.01]" aria-label="KRAYOU Home">
+      <div class="h-9 sm:h-10 lg:h-11 w-auto flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 388" class="h-full w-auto overflow-visible" role="img" aria-label="KRAYOU">
+          <defs>
+            <style>
+              .st0 { fill: #556b2f; }
+              .st1 { fill: #ad5a1f; }
+              .st2 { fill: #e06a1b; }
+            </style>
+          </defs>
+          <g id="Layer_1">
+            <path class="st0" d="M1115.55,10.52c-22.67,2.17-42.14,11.83-59.06,26.15-25.78,21.8-40.04,51.17-47.75,83.3-9.31,38.78-11.46,82.74-6.14,122.4,2.36,17.62,5.11,34.55,11.29,51.23,13.33,36.03,34.77,65.02,71.93,80.54,53.2,22.2,119.14,4.98,151.43-43.47,14.65-22,22.93-46.48,27.77-72.27,4.6-24.5,4.79-48.42,4.78-73.41-.01-46.69-12.25-102.8-45.05-138.55-28.57-31.13-67.33-39.91-109.2-35.91ZM1194.08,221.71l-1.62,18.98c-1.39,16.18-6.07,31.94-12.8,46.75-4.9,10.81-11.79,20.45-21.81,27.62-18.19,13.02-41.71,8-55.45-8.12-6.08-7.13-10.23-14.71-13.66-23.65-14.56-37.88-14.63-74.71-11.7-114.69.99-13.59,3.07-26.39,6.01-39.8,3.02-13.8,8.49-26.65,16.62-38.13,9.4-13.27,23.53-20.04,39.98-18.73,12.78,1.01,23.1,6.96,30.68,16.96,18.51,24.41,22.18,58.85,23.8,88.48.82,14.95,1.21,29.53-.05,44.33Z"></path>
+            <path class="st0" d="M1362.63,253.2c0,15.2.38,29.28,3.74,43.79,2.16,9.31,8.47,16.45,15.57,19.92,9.47,4.63,19.18,3.71,28.48-.2,18.14-7.63,21.79-29.8,22.83-63.45l-1.16-123.95.77-118.92,60.7-.24c4.36-.01,8.74-.27,12.41-.15.04,11.1.28,22.74.33,33.44l.51,97.67.18,123.85c0,3.36.02,5.72-.24,8.88-2.47,29.92-10.95,65.47-35.74,85.14-10.18,8.07-20.71,14.27-33.38,17.69-60.96,16.52-131.34-1.67-145.4-69.03-2.48-11.88-4.03-22.45-4.03-34.72v-83.51l.2-19.87.12-82.54-.68-14.88c-.36-7.77.34-15.23.04-22.91,1.33-13.02.03-25.51-.14-38.96l74.43-.25"></path>
+            <path class="st0" d="M857.6,265.06c-.16-55.43,2.26-32.91-21.46-90.56l-13.49-32.77-54.45-131.41,76.35-.05,21.71,56.63,30.89,85.29,28.39-82,12.56-36.42c2.92-7.63,5.17-14.9,7.12-23.39l75.5,1.33-18.36,46.03-16.86,41.15-15.05,36.06-10.69,25.75-15.7,37.74c-15.83,38.06-11.82,21.4-12.03,68.79l-.3,115.16h-73.69"></path>
+            <polyline class="st0" points="367.09 382.39 295.09 382.39 295.12 229.66 367.09 302.56"></polyline>
+            <path class="st2" d="M540.49,382.39c-9.06.26-17.22-.01-25.89,0h-52.53l-15.45-16.22-33.66-35.45-39.06-41.97-44.37-45.6-33.9-32.08c.85-7.79.8-15.24.84-23.45,42.82-.06,94.57,6.55,130.52-22.15,24.41-19.49,30.87-53.99,14.93-80.98-16.81-28.46-56.56-35.18-86.83-35.81l-36.52-.75c-18.05-.37-35.52-.68-53.79.29l18.99-38.15c6.61-.07,12.79-.32,20.09-.03l280.06.14c-8.86,15.14-15.12,25.71-22.69,37.58l-68.5.99c-2.64.04-4.88-.24-7.43,1.66,17.76,12.98,27.77,25.17,32.35,46.98,6.39,30.4-4.36,60.76-27.1,81.71-28.17,25.97-65.43,36.45-102.97,40.19-.96.1-2.8.83-3.04,2.12"></path>
+            <path class="st0" d="M14.91,10.26l61.65-.03c4.81,0,9.14-.76,13.61.03l-.19,82.85.8,70.05,30.36-53.36,13.7-24.45L177.63,10.24h41.98c12.74,0,24.34-.24,38.95-.24-5.93,12-12.74,23.79-19.22,34.76l-22.68,38.42-57.39,97.88,22.34,40.15,14.01,26.03c4.73,8.8,9.4,16.97,14.27,25.7l20.41,36.57,16.05,28.01,11.6,19.34,13.4,24.75c.09,2.39-4.26.59-5.79.58l-77.43-.13c-4.74-9.9-9.79-18.59-14.72-27.9l-11.78-22.25-9.37-16.6-9.51-17.59-12.38-23.58-26.35-47.83c-.6-1.08-2.17-1.05-2.72.06l-10.15,20.47c-1.31,2.64-.8,59.26-.81,67.28l-.03,68.27H15.52"></path>
+            <path class="st0" d="M622.6,381.97l9.71-40.24,11.92-51.34,89.1-.07,22.61,92.07c9.05.2,17.58.14,26.61,0h48.72l-15.41-59.33-21.23-83.86-13.26-49.83-16.72-62.07-7.08-23.99-24.94-93.16-91.04.1-8.33,31.8-12.97,54.07-30.78,123.82-3.87,16.22-13.51,55.65-16.82,67.25c-1.81,7.23-4.78,16.17-5.88,23.33M657.82,225.74c-.63-.85.39-3.3.71-4.91l16.41-81.53,11.09-58.2c1.72,2.04,1.9,3.96,2.39,6.22l15.2,70.48,10.39,45.7,4.84,22.29-61.03-.05Z"></path>
+          </g>
+          <g id="Layer_2">
+            <rect class="st0" x="295.09" y="62.3" width="72" height="110.74"></rect>
+          </g>
+        </svg>
+      </div>
+    </a>
+
+    <!-- Launching Soon Status Pill + Direct Brand Partner Link -->
+    <div class="flex items-center gap-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-brand-olive/20 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-brand-ember animate-pulse-subtle"></span>
+        <span class="font-mono text-xs uppercase tracking-wider font-semibold text-brand-olive">LAUNCHING EARLY 2027</span>
+      </div>
+      <div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-ember/10 text-brand-ember text-xs font-semibold font-mono border border-brand-ember/25">
+        <span>BRAND ACCESS COHORT #1</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN VIEWPORT CONTENT (1440px desktop single-screen grid) -->
+  <main class="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-2 lg:py-3 flex-1 flex flex-col justify-center z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      
+      <!-- LEFT COLUMN: EDITORIAL HERO COPY & BRAND VALUE (5 Cols) -->
+      <div class="lg:col-span-5 flex flex-col justify-center space-y-4 lg:space-y-5">
+        
+        <!-- Eyebrow Badge -->
+        <div class="flex items-center gap-2.5">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-bold tracking-widest uppercase bg-brand-charcoal text-white shadow-sm animate-pulse">
+            COMING SOON
+          </span>
+          <span class="text-xs font-medium text-brand-olive tracking-wide flex items-center gap-1">
+            <svg class="w-3.5 h-3.5 text-brand-ember" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            Youth Social Commerce
+          </span>
+        </div>
+
+        <!-- Primary Hero Headline -->
+        <h1 class="font-editorial text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.6rem] font-extrabold tracking-tight text-brand-charcoal leading-[1.03]">
+          THE NEXT WAVE<br>
+          OF SHOPPING<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-ember via-brand-terracotta to-brand-olive">IS SOCIAL.</span>
+        </h1>
+
+        <!-- Supporting Copy & Launch Statement -->
+        <div class="space-y-1.5 max-w-md">
+          <p class="text-base sm:text-lg text-brand-graphite font-medium leading-snug">
+            Discover brands. Share what you love. <span class="text-brand-ember font-semibold">Earn while you shop.</span>
+          </p>
+          <p class="text-sm font-mono font-medium text-brand-muted flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full bg-brand-olive"></span>
+            Krayou is bringing your favourite brands together.</p>
+        </div>
+
+        <!-- E-COMMERCE & SOCIAL PILLARS (Communicates platform depth to visiting brands) -->
+        <div class="pt-2 border-t border-brand-charcoal/10 grid grid-cols-3 gap-3">
+          <div class="bg-white/70 rounded-xl p-2.5 border border-brand-charcoal/5">
+            <div class="font-editorial text-brand-ember font-bold text-lg">0%</div>
+            <div class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider">Listing Fee</div>
+            <div class="text-[10px] text-brand-muted leading-tight mt-0.5">For launch cohort</div>
+          </div>
+          <div class="bg-white/70 rounded-xl p-2.5 border border-brand-charcoal/5">
+            <div class="font-editorial text-brand-olive font-bold text-lg">100%</div>
+            <div class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider">Gen-Z Native</div>
+            <div class="text-[10px] text-brand-muted leading-tight mt-0.5">Creator referral loop</div>
+          </div>
+          <div class="bg-white/70 rounded-xl p-2.5 border border-brand-charcoal/5">
+            <div class="font-editorial text-brand-terracotta font-bold text-lg">4.2x</div>
+            <div class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider">Social Reach</div>
+            <div class="text-[10px] text-brand-muted leading-tight mt-0.5">Organic viral shares</div>
+          </div>
+        </div>
+
+        <!-- Social Validation Tags -->
+        
+
+      </div>
+
+      <!-- RIGHT COLUMN: EDITORIAL CAMPAIGN VISUAL + FLOATING BRAND ONBOARDING CTA (7 Cols) -->
+      <div class="lg:col-span-7 relative">
+        <div class="relative w-full rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl border border-white/60 bg-brand-sand aspect-[16/11] max-h-[480px]">
+          
+          <!-- Editorial Hero Image of Young Fashion Creators -->
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1WtMo4UAHbg4EIG3g1uP7BD6XDGsl5CLE-il8cen4Tc7Pl6s8O886jfcqQbFlbzSLlsdlk12jl2vgJyCB2jLKEnpxwjv_MBpeIxwqkfpiV4vrWJf7qmHlBZPwcJxr2eriQWBnG_IYrC8E3a2OHrKvEzw17Av-rEfTEOqZi2XRCniTGcpan8TU6_rSB2bvh9riYOi5XeXHm5dpXCxCUJZVO7WIMFbcpTAJRj1W1Q" alt="Krayou Gen-Z Fashion Community Campaign" class="w-full h-full object-cover object-center filter saturate-[1.05] contrast-[1.02]">
+
+          <!-- Gradient Overlay for Legibility and Brand Atmosphere -->
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/85 via-brand-charcoal/20 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-charcoal/60 via-transparent to-brand-ember/15"></div>
+
+          <!-- INTEGRATED COMMERCE UI FRAGMENT #1 (Top Left: Live Dropping Product Tag) -->
+          <div class="absolute top-4 left-4 z-10 animate-float hidden sm:flex items-center gap-2.5 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/20 text-white shadow-floating">
+            <div class="w-2.5 h-2.5 rounded-full bg-brand-ember animate-ping"></div>
+            <div class="text-xs font-medium tracking-tight">
+              <span class="text-white/70">Drop #04:</span> <span class="font-bold text-white">Urban Ikat Bomber</span>
+            </div>
+            <span class="bg-brand-ember text-white text-[10px] font-mono font-bold px-2 py-0.5 rounded-full">₹3,499</span>
+          </div>
+
+          <!-- INTEGRATED COMMERCE UI FRAGMENT #2 (Top Right: Referral Commerce Badge) -->
+          <div class="absolute top-4 right-4 z-10 animate-float-rev hidden md:flex items-center gap-2 bg-brand-olive/85 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/25 text-white shadow-floating">
+            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+            </svg>
+            <span class="text-xs font-mono font-semibold">12.8k Brand Shares Today</span>
+          </div>
+
+          <!-- BRAND ONBOARDING CONVERSION CARD (Prominently anchored within the hero frame) -->
+          <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 md:left-auto md:right-4 md:bottom-4 md:max-w-md z-20">
+            <div class="glass-card rounded-2xl p-4 sm:p-5 shadow-premium text-brand-charcoal transition-all duration-300 hover:shadow-glow">
+              
+              <!-- Card Header -->
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <div>
+                  <div class="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-brand-ember font-bold mb-0.5 animate-pulse">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-ember"></span>
+                    Brand Partnerships Open
+                  </div>
+                  <h3 class="font-editorial text-lg sm:text-xl font-extrabold text-brand-charcoal tracking-tight">
+                    Want your brand on Krayou?
+                  </h3>
+                </div>
+                <div class="hidden sm:flex h-8 w-8 rounded-full bg-brand-sand border border-brand-charcoal/10 items-center justify-center text-brand-olive shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Supporting Copy -->
+              <p class="text-xs text-brand-graphite font-normal leading-relaxed mb-3">
+                Join the next generation of social commerce and get your brand in front of a new community of shoppers.
+              </p>
+
+              <!-- Conversion Form -->
+              <form id="brand-deck-form" onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden'); document.getElementById('form-inputs').classList.add('hidden');" class="space-y-2">
+                <div id="form-inputs" class="space-y-2">
+                  <div class="relative flex items-center">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-brand-muted">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
+                      </svg>
+                    </div>
+                    <input type="email" required="" placeholder="Enter your business email" class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-brand-sand/80 border border-brand-charcoal/15 text-xs text-brand-charcoal placeholder-brand-muted focus:outline-none focus:ring-2 focus:ring-brand-ember focus:bg-white focus:border-transparent transition-all">
+                  </div>
+                  
+                  <button type="submit" class="w-full py-2.5 px-4 rounded-xl bg-brand-ember hover:bg-brand-emberHover active:scale-[0.99] text-white font-sans font-bold text-xs tracking-wide uppercase transition-all duration-200 shadow-md flex items-center justify-center gap-2 group cursor-pointer">
+                    <span>Get the Brand Deck</span>
+                    <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Instant confirmation state (interactive) -->
+                <div id="success-msg" class="hidden py-3 px-3.5 rounded-xl bg-brand-olive/10 border border-brand-olive/20 text-center">
+                  <div class="flex items-center justify-center gap-1.5 text-xs font-bold text-brand-olive mb-0.5">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Deck Link Sent!
+                  </div>
+                  <p class="text-[11px] text-brand-graphite">Check your inbox. Our onboarding partner lead will reach out today.</p>
+                </div>
+
+                <!-- Subtle trust copy -->
+                <p class="text-[10px] text-brand-muted text-center leading-tight pt-0.5">
+                  Share your email and our team will get in touch.
+                </p>
+              </form>
+
+            </div>
+          </div>
+
+          <!-- Bottom Left Tag in Hero Image: Live Community Signal -->
+          
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- BOTTOM FOOTER STRIP (Minimal, compact, single-screen baseline) -->
+  <footer class="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-3 flex flex-col sm:flex-row items-center justify-between border-t border-brand-charcoal/10 text-xs text-brand-muted shrink-0 z-20 gap-2 sm:gap-0">
+    <div class="flex items-center gap-4">
+      <span class="font-mono text-brand-graphite font-semibold">© 2025 KRAYOU PLATFORM INC.</span>
+      <span class="hidden md:inline-block text-brand-charcoal/20">|</span>
+      <span class="hidden md:inline-block">Mumbai • Bengaluru • Delhi NCR</span>
+    </div>
+    
+    <div class="flex items-center gap-5 font-mono text-[11px]">
+      
+      <a href="mailto:partners@krayou.com" class="text-brand-ember font-semibold hover:underline">partners@krayou.com</a>
+      <span class="text-brand-graphite">Social Referral E-Commerce</span>
+    </div>
+  </footer>
+
+
+
+
+
+
+</body></html>
