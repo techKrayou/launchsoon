@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KRAYOU — The Next Wave of Shopping is Social</title>
+<meta name="description" content="Discover brands. Share what you love. Earn while you shop. Krayou launches early 2027.">
+<style>html,body{margin:0;height:100%;background:#F9F8F4}</style>
+<script>
+(function () {
+  // Change these if your file names are different
+  var MOBILE_PAGE  = 'mobile.html';
+  var DESKTOP_PAGE = 'desktop.html';
+
+  var params = new URLSearchParams(location.search);
+  var forced = params.get('view');               // ?view=mobile or ?view=desktop (for testing)
+
+  var isPhoneUA = /Android.+Mobile|iPhone|iPod|Windows Phone|webOS|BlackBerry/i.test(navigator.userAgent);
+  var isNarrow  = window.matchMedia('(max-width: 767px)').matches;
+
+  var useMobile = forced ? forced === 'mobile' : (isPhoneUA || isNarrow);
+  var target = useMobile ? MOBILE_PAGE : DESKTOP_PAGE;
+
+  // keep any other query string / hash (utm params etc.)
+  params.delete('view');
+  var qs = params.toString();
+  location.replace(target + (qs ? '?' + qs : '') + location.hash);
+})();
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=desktop.html">
+</noscript>
+</head>
+<body>
+  <noscript>
+    <p style="font-family:sans-serif;padding:24px">
+      <a href="desktop.html">Desktop version</a> · <a href="mobile.html">Mobile version</a>
+    </p>
+  </noscript>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krayou — Coming Soon</title>
@@ -539,4 +581,4 @@
   setInterval(tick, 1000);
 </script>
 </body>
-</html>
+</html> -->
