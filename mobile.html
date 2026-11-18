@@ -43,6 +43,9 @@
       50% { transform: scale(1.3); opacity: 0.4; }
       100% { transform: scale(0.95); opacity: 0.9; }
     }
+    /* Brand form hardening: always stacked + always typeable */
+    #brand-deck-form { display: flex; flex-direction: column; gap: 0.5rem; width: 100%; }
+    #brand-deck-form input, #brand-deck-form button { position: relative; z-index: 1; pointer-events: auto; width: 100%; }
   </style>
 </head>
 <body class="text-brand-dark antialiased min-h-screen bg-[#FBF9F5] flex justify-center selection:bg-brand-ember selection:text-white">
