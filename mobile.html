@@ -1,42 +1,28 @@
 <!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>KRAYOU — The Next Wave of Shopping is Social</title>
-<!-- Google Fonts: Syne & Plus Jakarta Sans -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Syne:wght@700;800;900&amp;display=swap" rel="stylesheet">
-<!-- Tailwind CSS CDN with Plugins -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="brannd-register.js" defer></script>
-
 <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: {
-              olive: '#556B2F',
-              ember: '#E06A1B',
-              bg: '#F9F8F4',
-              surface: '#FFFFFF',
-              dark: '#161811'
-            }
+            brand: { olive: '#556B2F', ember: '#E06A1B', bg: '#F9F8F4', surface: '#FFFFFF', dark: '#161811' }
           },
           fontFamily: {
             syne: ['Syne', 'sans-serif'],
             sans: ['Plus Jakarta Sans', 'sans-serif'],
           },
-          letterSpacing: {
-            tighter: '-0.04em',
-            tightest: '-0.06em',
-          }
+          letterSpacing: { tighter: '-0.04em', tightest: '-0.06em' }
         }
       }
     }
   </script>
-<!-- Custom Styles: Background & Micro-patterns -->
-<style data-purpose="background-styling">
+<style>
     body {
       background-color: #F9F8F4;
       background-image: radial-gradient(rgba(85, 107, 47, 0.08) 1px, transparent 1px);
@@ -44,23 +30,14 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       -webkit-tap-highlight-color: transparent;
     }
-  </style>
-<!-- Custom Styles: Editorial Card & Button Effects -->
-<style data-purpose="card-and-effects">
-    .editorial-border {
-      border: 1px solid rgba(85, 107, 47, 0.12);
-    }
+    .editorial-border { border: 1px solid rgba(85, 107, 47, 0.12); }
     .frosted-glass {
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       background: rgba(22, 24, 17, 0.65);
     }
-    .warm-glow {
-      box-shadow: 0 20px 40px -15px rgba(224, 106, 27, 0.12);
-    }
-    .orange-pulse {
-      animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-    }
+    .warm-glow { box-shadow: 0 20px 40px -15px rgba(224, 106, 27, 0.12); }
+    .orange-pulse { animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
     @keyframes pulse-ring {
       0% { transform: scale(0.95); opacity: 0.9; }
       50% { transform: scale(1.3); opacity: 0.4; }
@@ -69,41 +46,31 @@
   </style>
 </head>
 <body class="text-brand-dark antialiased min-h-screen bg-[#FBF9F5] flex justify-center selection:bg-brand-ember selection:text-white">
-<!-- Mobile Frame Wrapper (Constrained to 390px) -->
 <div class="w-full max-w-[480px] min-h-screen flex flex-col justify-between bg-[#F9F8F4] relative border-x border-[#ebe8dc]/80 shadow-2xl">
-<!-- BEGIN: TopNavigation -->
-<header class="z-50 bg-[#F9F8F4]/95 backdrop-blur-md px-5 py-3 border-b border-[#556B2F]/10 flex items-center justify-between shrink-0" data-purpose="site-header"><a aria-label="Krayou Home" class="inline-block transition-transform active:scale-95" href="#"><svg aria-label="KRAYOU Logo" class="h-5 w-auto max-w-[100px]" fill="none" role="img" viewBox="0 0 1536 388" xmlns="http://www.w3.org/2000/svg"><path d="M1115.55,10.52c-22.67,2.17-42.14,11.83-59.06,26.15-25.78,21.8-40.04,51.17-47.75,83.3-9.31,38.78-11.46,82.74-6.14,122.4,2.36,17.62,5.11,34.55,11.29,51.23,13.33,36.03,34.77,65.02,71.93,80.54,53.2,22.2,119.14,4.98,151.43-43.47,14.65-22,22.93-46.48,27.77-72.27,4.6-24.5,4.79-48.42,4.78-73.41-.01-46.69-12.25-102.8-45.05-138.55-28.57-31.13-67.33-39.91-109.2-35.91ZM1194.08,221.71l-1.62,18.98c-1.39,16.18-6.07,31.94-12.8,46.75-4.9,10.81-11.79,20.45-21.81,27.62-18.19,13.02-41.71,8-55.45-8.12-6.08-7.13-10.23-14.71-13.66-23.65-14.56-37.88-14.63-74.71-11.7-114.69.99-13.59,3.07-26.39,6.01-39.8,3.02-13.8,8.49-26.65,16.62-38.13,9.4-13.27,23.53-20.04,39.98-18.73,12.78,1.01,23.1,6.96,30.68,16.96,18.51,24.41,22.18,58.85,23.8,88.48.82,14.95,1.21,29.53-.05,44.33Z" fill="#556B2F"></path><path d="M1362.63,253.2c0,15.2.38,29.28,3.74,43.79,2.16,9.31,8.47,16.45,15.57,19.92,9.47,4.63,19.18,3.71,28.48-.2,18.14-7.63,21.79-29.8,22.83-63.45l-1.16-123.95.77-118.92,60.7-.24c4.36-.01,8.74-.27,12.41-.15.04,11.1.28,22.74.33,33.44l.51,97.67.18,123.85c0,3.36.02,5.72-.24,8.88-2.47,29.92-10.95,65.47-35.74,85.14-10.18,8.07-20.71,14.27-33.38,17.69-60.96,16.52-131.34-1.67-145.4-69.03-2.48-11.88-4.03-22.45-4.03-34.72v-83.51l.2-19.87.12-82.54-.68-14.88c-.36-7.77.34-15.23.04-22.91,1.33-13.02.03-25.51-.14-38.96l74.43-.25" fill="#556B2F"></path><path d="M857.6,265.06c-.16-55.43,2.26-32.91-21.46-90.56l-13.49-32.77-54.45-131.41,76.35-.05,21.71,56.63,30.89,85.29,28.39-82,12.56-36.42c2.92-7.63,5.17-14.9,7.12-23.39l75.5,1.33-18.36,46.03-16.86,41.15-15.05,36.06-10.69,25.75-15.7,37.74c-15.83,38.06-11.82,21.4-12.03,68.79l-.3,115.16h-73.69" fill="#556B2F"></path><polygon fill="#556B2F" points="367.09 382.39 295.09 382.39 295.12 229.66 367.09 302.56"></polygon><path d="M540.49,382.39c-9.06.26-17.22-.01-25.89,0h-52.53l-15.45-16.22-33.66-35.45-39.06-41.97-44.37-45.6-33.9-32.08c.85-7.79.8-15.24.84-23.45,42.82-.06,94.57,6.55,130.52-22.15,24.41-19.49,30.87-53.99,14.93-80.98-16.81-28.46-56.56-35.18-86.83-35.81l-36.52-.75c-18.05-.37-35.52-.68-53.79.29l18.99-38.15c6.61-.07,12.79-.32,20.09-.03l280.06.14c-8.86,15.14-15.12,25.71-22.69,37.58l-68.5.99c-2.64.04-4.88-.24-7.43,1.66,17.76,12.98,27.77,25.17,32.35,46.98,6.39,30.4-4.36,60.76-27.1,81.71-28.17,25.97-65.43,36.45-102.97,40.19-.96.1-2.8.83-3.04,2.12" fill="#E06A1B"></path><path d="M14.91,10.26l61.65-.03c4.81,0,9.14-.76,13.61.03l-.19,82.85.8,70.05,30.36-53.36,13.7-24.45L177.63,10.24h41.98c12.74,0,24.34-.24,38.95-.24-5.93,12-12.74,23.79-19.22,34.76l-22.68,38.42-57.39,97.88,22.34,40.15,14.01,26.03c4.73,8.8,9.4,16.97,14.27,25.7l20.41,36.57,16.05,28.01,11.6,19.34,13.4,24.75c.09,2.39-4.26.59-5.79.58l-77.43-.13c-4.74-9.9-9.79-18.59-14.72-27.9l-11.78-22.25-9.37-16.6-9.51-17.59-12.38-23.58-26.35-47.83c-.6-1.08-2.17-1.05-2.72.06l-10.15,20.47c-1.31,2.64-.8,59.26-.81,67.28l-.03,68.27H15.52" fill="#556B2F"></path><path d="M622.6,381.97l9.71-40.24,11.92-51.34,89.1-.07,22.61,92.07c9.05.2,17.58.14,26.61,0h48.72l-15.41-59.33-21.23-83.86-13.26-49.83-16.72-62.07-7.08-23.99-24.94-93.16-91.04.1-8.33,31.8-12.97,54.07-30.78,123.82-3.87,16.22-13.51,55.65-16.82,67.25c-1.81,7.23-4.78,16.17-5.88,23.33M657.82,225.74c-.63-.85.39-3.3.71-4.91l16.41-81.53,11.09-58.2c1.72,2.04,1.9,3.96,2.39,6.22l15.2,70.48,10.39,45.7,4.84,22.29-61.03-.05Z" fill="#556B2F"></path><rect fill="#556B2F" height="110.74" width="72" x="295.09" y="62.3"></rect></svg></a><div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#161811]/5 border border-[#556B2F]/20 text-[10px] font-bold tracking-wider text-brand-dark uppercase" data-purpose="status-badge"><span class="relative flex h-1.5 w-1.5"><span class="orange-pulse absolute inline-flex h-full w-full rounded-full bg-brand-ember opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-ember"></span></span> EARLY 2027</div></header>
-<!-- END: TopNavigation -->
-<main class="flex-1 flex flex-col px-5 py-5 gap-2"><!-- BEGIN: HeroHeadlineSection -->
-<section class="space-y-1.5 shrink-0" data-purpose="hero-copy"><div class="flex items-center gap-2 mb-2"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[9px] font-black tracking-widest bg-brand-dark text-[#F9F8F4] uppercase shadow-sm"><span class="relative flex h-1.5 w-1.5"><span class="orange-pulse absolute inline-flex h-full w-full rounded-full bg-brand-ember opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-ember animate-ping"></span></span><span class="animate-pulse">COMING SOON</span></span><span class="text-[10px] font-bold tracking-wide text-brand-olive uppercase">YOUTH SOCIAL COMMERCE</span></div><h1 class="font-syne font-black text-2xl sm:text-[26px] leading-[1.15] tracking-tight uppercase text-brand-dark">THE NEXT WAVE OF SHOPPING <span class="text-brand-ember">IS SOCIAL.</span></h1><p class="text-sm text-brand-dark/80 font-normal leading-relaxed mt-1.5">Discover brands. Share what you love. <span class="text-brand-ember font-semibold underline decoration-brand-ember/40 decoration-1 underline-offset-2">Earn while you shop.</span></p></section>
-<!-- END: HeroHeadlineSection -->
 
-<!-- BEGIN: HeroCampaignVisual -->
-<section class="relative rounded-2xl overflow-hidden shadow-lg border border-[#556B2F]/20 w-full bg-brand-dark aspect-[16/9] min-h-[190px]" data-purpose="campaign-image-container"><img alt="Krayou Campaign" class="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.02]" loading="eager" src="https://media-krayou.s3.ap-south-1.amazonaws.com/uploads/mobile/assets/app/home/categories/mobile.png"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div><div class="absolute top-3 left-3 frosted-glass text-white px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide border border-white/20 flex items-center gap-1.5 shadow-sm"><span class="h-2 w-2 rounded-full bg-brand-ember"></span><span>Drop #04: Urban Bomber ₹3,499</span></div><div class="absolute top-3 right-3 frosted-glass text-white px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide border border-white/20 flex items-center gap-1.5 shadow-sm"><svg class="w-3 h-3 text-brand-ember" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg><span>12.8k Shares</span></div></section>
-<!-- END: HeroCampaignVisual -->
+<!-- TopNavigation -->
+<header class="z-50 bg-[#F9F8F4]/95 backdrop-blur-md px-5 py-3 border-b border-[#556B2F]/10 flex items-center justify-between shrink-0"><a aria-label="Krayou Home" class="inline-block transition-transform active:scale-95" href="#"><svg aria-label="KRAYOU Logo" class="h-5 w-auto max-w-[100px]" fill="none" role="img" viewBox="0 0 1536 388" xmlns="http://www.w3.org/2000/svg"><path d="M1115.55,10.52c-22.67,2.17-42.14,11.83-59.06,26.15-25.78,21.8-40.04,51.17-47.75,83.3-9.31,38.78-11.46,82.74-6.14,122.4,2.36,17.62,5.11,34.55,11.29,51.23,13.33,36.03,34.77,65.02,71.93,80.54,53.2,22.2,119.14,4.98,151.43-43.47,14.65-22,22.93-46.48,27.77-72.27,4.6-24.5,4.79-48.42,4.78-73.41-.01-46.69-12.25-102.8-45.05-138.55-28.57-31.13-67.33-39.91-109.2-35.91ZM1194.08,221.71l-1.62,18.98c-1.39,16.18-6.07,31.94-12.8,46.75-4.9,10.81-11.79,20.45-21.81,27.62-18.19,13.02-41.71,8-55.45-8.12-6.08-7.13-10.23-14.71-13.66-23.65-14.56-37.88-14.63-74.71-11.7-114.69.99-13.59,3.07-26.39,6.01-39.8,3.02-13.8,8.49-26.65,16.62-38.13,9.4-13.27,23.53-20.04,39.98-18.73,12.78,1.01,23.1,6.96,30.68,16.96,18.51,24.41,22.18,58.85,23.8,88.48.82,14.95,1.21,29.53-.05,44.33Z" fill="#556B2F"></path><path d="M1362.63,253.2c0,15.2.38,29.28,3.74,43.79,2.16,9.31,8.47,16.45,15.57,19.92,9.47,4.63,19.18,3.71,28.48-.2,18.14-7.63,21.79-29.8,22.83-63.45l-1.16-123.95.77-118.92,60.7-.24c4.36-.01,8.74-.27,12.41-.15.04,11.1.28,22.74.33,33.44l.51,97.67.18,123.85c0,3.36.02,5.72-.24,8.88-2.47,29.92-10.95,65.47-35.74,85.14-10.18,8.07-20.71,14.27-33.38,17.69-60.96,16.52-131.34-1.67-145.4-69.03-2.48-11.88-4.03-22.45-4.03-34.72v-83.51l.2-19.87.12-82.54-.68-14.88c-.36-7.77.34-15.23.04-22.91,1.33-13.02.03-25.51-.14-38.96l74.43-.25" fill="#556B2F"></path><path d="M857.6,265.06c-.16-55.43,2.26-32.91-21.46-90.56l-13.49-32.77-54.45-131.41,76.35-.05,21.71,56.63,30.89,85.29,28.39-82,12.56-36.42c2.92-7.63,5.17-14.9,7.12-23.39l75.5,1.33-18.36,46.03-16.86,41.15-15.05,36.06-10.69,25.75-15.7,37.74c-15.83,38.06-11.82,21.4-12.03,68.79l-.3,115.16h-73.69" fill="#556B2F"></path><polygon fill="#556B2F" points="367.09 382.39 295.09 382.39 295.12 229.66 367.09 302.56"></polygon><path d="M540.49,382.39c-9.06.26-17.22-.01-25.89,0h-52.53l-15.45-16.22-33.66-35.45-39.06-41.97-44.37-45.6-33.9-32.08c.85-7.79.8-15.24.84-23.45,42.82-.06,94.57,6.55,130.52-22.15,24.41-19.49,30.87-53.99,14.93-80.98-16.81-28.46-56.56-35.18-86.83-35.81l-36.52-.75c-18.05-.37-35.52-.68-53.79.29l18.99-38.15c6.61-.07,12.79-.32,20.09-.03l280.06.14c-8.86,15.14-15.12,25.71-22.69,37.58l-68.5.99c-2.64.04-4.88-.24-7.43,1.66,17.76,12.98,27.77,25.17,32.35,46.98,6.39,30.4-4.36,60.76-27.1,81.71-28.17,25.97-65.43,36.45-102.97,40.19-.96.1-2.8.83-3.04,2.12" fill="#E06A1B"></path><path d="M14.91,10.26l61.65-.03c4.81,0,9.14-.76,13.61.03l-.19,82.85.8,70.05,30.36-53.36,13.7-24.45L177.63,10.24h41.98c12.74,0,24.34-.24,38.95-.24-5.93,12-12.74,23.79-19.22,34.76l-22.68,38.42-57.39,97.88,22.34,40.15,14.01,26.03c4.73,8.8,9.4,16.97,14.27,25.7l20.41,36.57,16.05,28.01,11.6,19.34,13.4,24.75c.09,2.39-4.26.59-5.79.58l-77.43-.13c-4.74-9.9-9.79-18.59-14.72-27.9l-11.78-22.25-9.37-16.6-9.51-17.59-12.38-23.58-26.35-47.83c-.6-1.08-2.17-1.05-2.72.06l-10.15,20.47c-1.31,2.64-.8,59.26-.81,67.28l-.03,68.27H15.52" fill="#556B2F"></path><path d="M622.6,381.97l9.71-40.24,11.92-51.34,89.1-.07,22.61,92.07c9.05.2,17.58.14,26.61,0h48.72l-15.41-59.33-21.23-83.86-13.26-49.83-16.72-62.07-7.08-23.99-24.94-93.16-91.04.1-8.33,31.8-12.97,54.07-30.78,123.82-3.87,16.22-13.51,55.65-16.82,67.25c-1.81,7.23-4.78,16.17-5.88,23.33M657.82,225.74c-.63-.85.39-3.3.71-4.91l16.41-81.53,11.09-58.2c1.72,2.04,1.9,3.96,2.39,6.22l15.2,70.48,10.39,45.7,4.84,22.29-61.03-.05Z" fill="#556B2F"></path><rect fill="#556B2F" height="110.74" width="72" x="295.09" y="62.3"></rect></svg></a><div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#161811]/5 border border-[#556B2F]/20 text-[10px] font-bold tracking-wider text-brand-dark uppercase"><span class="relative flex h-1.5 w-1.5"><span class="orange-pulse absolute inline-flex h-full w-full rounded-full bg-brand-ember opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-ember"></span></span> EARLY 2027</div></header>
 
-<!-- BEGIN: BrandOnboardingCard -->
-<section class="bg-white/90 backdrop-blur rounded-2xl shadow-md warm-glow editorial-border relative overflow-hidden shrink-0 px-4 py-2.5" data-purpose="conversion-card"><div class="absolute -top-10 -right-10 w-28 h-28 bg-[#E06A1B]/10 rounded-full blur-xl pointer-events-none"></div><div class="absolute -bottom-8 -left-8 w-28 h-28 bg-[#556B2F]/10 rounded-full blur-xl pointer-events-none"></div><div class="flex items-center gap-1.5 mb-1"><span class="relative flex h-2 w-2 mr-0.5"><span class="orange-pulse absolute inline-flex h-full w-full rounded-full bg-brand-ember opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-brand-ember animate-ping"></span></span><span class="text-[11px] font-extrabold uppercase tracking-wider text-brand-ember animate-pulse">BRAND PARTNERSHIPS OPEN</span></div><h2 class="font-syne font-bold text-lg sm:text-xl tracking-tight text-brand-dark mb-1 leading-snug">Want your brand on Krayou?</h2><p class="text-xs text-brand-dark/75 leading-relaxed mb-2">Join the next generation of social commerce and reach new shoppers.</p><form class="gap-2 flex flex-col" data-purpose="onboarding-form" id="brand-deck-form" onsubmit="event.preventDefault(); document.getElementById('success-state').classList.remove('hidden'); this.classList.add('opacity-40', 'pointer-events-none');"><div class="relative"><label class="sr-only" for="business-email">Business Email Address</label><div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-stone-400 font-bold text-sm"><!-- </div><input class="w-full pl-8 pr-4 rounded-xl bg-[#F9F8F4] border border-[#556B2F]/20 text-brand-dark text-xs sm:text-sm placeholder:text-stone-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-ember/30 focus:border-brand-ember transition-all h-11 py-2" id="business-email" name="business_email" placeholder="Enter your business email" required="" type="email"></div><button class="w-full bg-brand-ember text-white rounded-xl font-syne font-bold text-xs sm:text-sm tracking-wide uppercase px-4 flex items-center justify-center gap-2 shadow hover:bg-[#c95a12] active:scale-[0.98] transition-all h-11 py-2" type="submit" disabled><span>Get the Brand Deck</span><span class="text-sm font-bold">→</span></button><p class="text-[10px] text-center text-stone-500 font-medium leading-normal">Share your email and our partnerships team will get in touch.</p></form><div class="hidden mt-2 p-2 rounded-lg bg-brand-olive/10 border border-brand-olive/20 text-center animate-fade-in" id="success-state"><p class="text-xs font-bold text-brand-olive">Deck sent! Check your inbox soon.</p> --><form class="gap-2 flex flex-col" data-purpose="onboarding-form" id="brand-deck-form"><div class="relative"><label class="sr-only" for="business-email">Business Email Address</label><div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-stone-400 font-bold text-sm"></div><input class="w-full pl-8 pr-4 rounded-xl bg-[#F9F8F4] border border-[#556B2F]/20 text-brand-dark text-xs sm:text-sm placeholder:text-stone-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-ember/30 focus:border-brand-ember transition-all h-11 py-2" id="business-email" name="business_email" placeholder="Enter your business email" required="" type="email"></div><button class="w-full bg-brand-ember text-white rounded-xl font-syne font-bold text-xs sm:text-sm tracking-wide uppercase px-4 flex items-center justify-center gap-2 shadow hover:bg-[#c95a12] active:scale-[0.98] transition-all h-11 py-2" type="submit"><span>Get the Brand Deck</span><span class="text-sm font-bold">→</span></button><p class="text-[10px] text-center text-stone-500 font-medium leading-normal">Share your email and our partnerships team will get in touch.</p></form></div></section><!-- END: BrandOnboardingCard -->
+<main class="flex-1 flex flex-col px-5 py-5 gap-2">
 
-<!-- BEGIN: ValueMetricsGrid -->
-<section class="shrink-0" data-purpose="value-metrics" style="margin-top: -6px;"><div class="grid grid-cols-3 gap-2.5"><div class="bg-white rounded-xl px-2 border border-[#556B2F]/15 text-center flex flex-col justify-center shadow-sm py-2.5"><span class="font-syne font-black text-xl leading-tight text-brand-dark">0%</span><span class="text-[9px] font-extrabold uppercase tracking-tight text-brand-ember mt-0.5">LISTING FEE</span><span class="text-[8px] text-stone-500 font-medium leading-tight mt-0.5">Launch cohort</span></div><div class="bg-white rounded-xl px-2 border border-[#556B2F]/15 text-center flex flex-col justify-center shadow-sm py-2.5"><span class="font-syne font-black text-xl leading-tight text-brand-olive">100%</span><span class="text-[9px] font-extrabold uppercase tracking-tight text-brand-dark mt-0.5">GEN-Z NATIVE</span><span class="text-[8px] text-stone-500 font-medium leading-tight mt-0.5">Referral loop</span></div><div class="bg-white rounded-xl px-2 border border-[#556B2F]/15 text-center flex flex-col justify-center shadow-sm py-2.5"><span class="font-syne font-black text-xl leading-tight text-brand-ember">4.2X</span><span class="text-[9px] font-extrabold uppercase tracking-tight text-brand-dark mt-0.5">SOCIAL REACH</span><span class="text-[8px] text-stone-500 font-medium leading-tight mt-0.5">Product shares</span></div></div></section>
-<!-- END: ValueMetricsGrid --></main>
-<!-- BEGIN: FooterSection -->
-<footer class="px-5 py-3 bg-[#F4F2EC] border-t border-[#556B2F]/15 text-center shrink-0 flex items-center justify-between text-xs" data-purpose="site-footer"><a class="text-brand-ember font-semibold underline decoration-brand-ember/40 hover:text-[#c95a12] transition-colors" href="mailto:partners@krayou.com">partners@krayou.com</a><p class="font-medium tracking-wide text-stone-500 uppercase">© 2026 KRAYOU</p></footer>
-<!-- END: FooterSection -->
+<!-- Hero copy -->
+<section class="space-y-1.5 shrink-0"><div class="flex items-center gap-2 mb-2"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[9px] font-black tracking-widest bg-brand-dark text-[#F9F8F4] uppercase shadow-sm"><span class="relative flex h-1.5 w-1.5"><span class="orange-pulse absolute inline-flex h-full w-full rounded-full bg-brand-ember opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-ember animate-ping"></span></span><span class="animate-pulse">COMING SOON</span></span><span class="text-[10px] font-bold tracking-wide text-brand-olive uppercase">YOUTH SOCIAL COMMERCE</span></div><h1 class="font-syne font-black text-2xl sm:text-[26px] leading-[1.15] tracking-tight uppercase text-brand-dark">THE NEXT WAVE OF SHOPPING <span class="text-brand-ember">IS SOCIAL.</span></h1><p class="text-sm text-brand-dark/80 font-normal leading-relaxed mt-1.5">Discover brands. Share what you love. <span class="text-brand-ember font-semibold underline decoration-brand-ember/40 decoration-1 underline-offset-2">Earn while you shop.</span></p></section>
+
+<!-- Campaign visual -->
+<section class="relative rounded-2xl overflow-hidden shadow-lg border border-[#556B2F]/20 w-full bg-brand-dark aspect-[16/9] min-h-[190px]"><img alt="Krayou Campaign" class="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.02]" loading="eager" src="https://media-krayou.s3.ap-south-1.amazonaws.com/uploads/mobile/assets/app/home/categories/mobile.png"><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div><div class="absolute top-3 left-3 frosted-glass text-white px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide border border-white/20 flex items-center gap-1.5 shadow-sm"><span class="h-2 w-2 rounded-full bg-brand-ember"></span><span>Drop #04: Urban Bomber ₹3,499</span></div><div class="absolute top-3 right-3 frosted-glass text-white px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide border border-white/20 flex items-center gap-1.5 shadow-sm"><svg class="w-3 h-3 text-brand-ember" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg><span>12.8k Shares</span></div></section>
+
+<!-- Brand onboarding card -->
+<section class="bg-white/90 backdrop-blur rounded-2xl shadow-md warm-glow editorial-border relative overflow-hidden shrink-0 px-4 py-2.5"><div class="absolute -top-10 -right-10 w-28 h-28 bg-[#E06A1B]/10 rounded-full blur-xl pointer-events-none"></div><div class="absolute -bottom-8 -left-8 w-28 h-28 bg-[#556B2F]/10 rounded-full blur-xl pointer-events-none"></div><div class="flex items-center gap-1.5 mb-1"><span class="relative flex h-2 w-2 mr-0.5"><span class="orange-pulse absolute inline-flex h-full w-full rounded-full bg-brand-ember opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-brand-ember animate-ping"></span></span><span class="text-[11px] font-extrabold uppercase tracking-wider text-brand-ember animate-pulse">BRAND PARTNERSHIPS OPEN</span></div><h2 class="font-syne font-bold text-lg sm:text-xl tracking-tight text-brand-dark mb-1 leading-snug">Want your brand on Krayou?</h2><p class="text-xs text-brand-dark/75 leading-relaxed mb-2">Join the next generation of social commerce and reach new shoppers.</p>
+
+<form class="gap-2 flex flex-col" data-purpose="onboarding-form" id="brand-deck-form"><div class="relative"><label class="sr-only" for="business-email">Business Email Address</label><input class="w-full px-4 rounded-xl bg-[#F9F8F4] border border-[#556B2F]/20 text-brand-dark text-xs sm:text-sm placeholder:text-stone-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-brand-ember/30 focus:border-brand-ember transition-all h-11 py-2" id="business-email" name="business_email" placeholder="Enter your business email" required type="email"></div><button class="w-full bg-brand-ember text-white rounded-xl font-syne font-bold text-xs sm:text-sm tracking-wide uppercase px-4 flex items-center justify-center gap-2 shadow hover:bg-[#c95a12] active:scale-[0.98] transition-all h-11 py-2" type="submit"><span>Get the Brand Deck</span><span class="text-sm font-bold">→</span></button><p class="text-[10px] text-center text-stone-500 font-medium leading-normal">Share your email and our partnerships team will get in touch.</p></form></section>
+
+<!-- Value metrics -->
+<section class="shrink-0" style="margin-top: -6px;"><div class="grid grid-cols-3 gap-2.5"><div class="bg-white rounded-xl px-2 border border-[#556B2F]/15 text-center flex flex-col justify-center shadow-sm py-2.5"><span class="font-syne font-black text-xl leading-tight text-brand-dark">0%</span><span class="text-[9px] font-extrabold uppercase tracking-tight text-brand-ember mt-0.5">LISTING FEE</span><span class="text-[8px] text-stone-500 font-medium leading-tight mt-0.5">Launch cohort</span></div><div class="bg-white rounded-xl px-2 border border-[#556B2F]/15 text-center flex flex-col justify-center shadow-sm py-2.5"><span class="font-syne font-black text-xl leading-tight text-brand-olive">100%</span><span class="text-[9px] font-extrabold uppercase tracking-tight text-brand-dark mt-0.5">GEN-Z NATIVE</span><span class="text-[8px] text-stone-500 font-medium leading-tight mt-0.5">Referral loop</span></div><div class="bg-white rounded-xl px-2 border border-[#556B2F]/15 text-center flex flex-col justify-center shadow-sm py-2.5"><span class="font-syne font-black text-xl leading-tight text-brand-ember">4.2X</span><span class="text-[9px] font-extrabold uppercase tracking-tight text-brand-dark mt-0.5">SOCIAL REACH</span><span class="text-[8px] text-stone-500 font-medium leading-tight mt-0.5">Product shares</span></div></div></section>
+</main>
+
+<!-- Footer -->
+<footer class="px-5 py-3 bg-[#F4F2EC] border-t border-[#556B2F]/15 text-center shrink-0 flex items-center justify-between text-xs"><a class="text-brand-ember font-semibold underline decoration-brand-ember/40 hover:text-[#c95a12] transition-colors" href="mailto:partners@krayou.com">partners@krayou.com</a><p class="font-medium tracking-wide text-stone-500 uppercase">© 2026 KRAYOU</p></footer>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="brannd-register.js" defer></script>
 </body></html>
