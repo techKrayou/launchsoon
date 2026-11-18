@@ -248,9 +248,30 @@
               <p class="text-xs text-brand-graphite font-normal leading-relaxed mb-3">
                 Join the next generation of social commerce and get your brand in front of a new community of shoppers.
               </p>
-
-              <!-- Conversion Form -->
-              <form id="brand-deck-form" onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden'); document.getElementById('form-inputs').classList.add('hidden');" class="space-y-2">
+              <form id="brand-deck-form" class="space-y-2">
+                <div class="space-y-2">
+                  <div class="relative flex items-center">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-brand-muted">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
+                      </svg>
+                    </div>
+                    <input type="email" name="email" required placeholder="Enter your business email" class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-brand-sand/80 border border-brand-charcoal/15 text-xs text-brand-charcoal placeholder-brand-muted focus:outline-none focus:ring-2 focus:ring-brand-ember focus:bg-white focus:border-transparent transition-all">
+                  </div>
+              
+                  <button type="submit" class="w-full py-2.5 px-4 rounded-xl bg-brand-ember hover:bg-brand-emberHover active:scale-[0.99] text-white font-sans font-bold text-xs tracking-wide uppercase transition-all duration-200 shadow-md flex items-center justify-center gap-2 group cursor-pointer">
+                    <span>Get the Brand Deck</span>
+                    <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </button>
+                </div>
+              
+                <p class="text-[10px] text-brand-muted text-center leading-tight pt-0.5">
+                  Share your email and our team will get in touch.
+                </p>
+              </form>
+              <!-- <form id="brand-deck-form" onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden'); document.getElementById('form-inputs').classList.add('hidden');" class="space-y-2">
                 <!-- <div id="form-inputs" class="space-y-2">
                   <div class="relative flex items-center">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-brand-muted">
@@ -267,9 +288,8 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                   </button>
-                </div> -->
+                </div> -- >
 
-                <!-- Instant confirmation state (interactive) -->
                 <div id="success-msg" class="hidden py-3 px-3.5 rounded-xl bg-brand-olive/10 border border-brand-olive/20 text-center">
                   <div class="flex items-center justify-center gap-1.5 text-xs font-bold text-brand-olive mb-0.5">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -280,11 +300,10 @@
                   <p class="text-[11px] text-brand-graphite">Check your inbox. Our onboarding partner lead will reach out today.</p>
                 </div>
 
-                <!-- Subtle trust copy -->
                 <p class="text-[10px] text-brand-muted text-center leading-tight pt-0.5">
                   Share your email and our team will get in touch.
                 </p>
-              </form>
+              </form> -->
 
             </div>
           </div>
