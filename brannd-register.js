@@ -2,7 +2,7 @@
    Include in BOTH mobile.html and desktop.html:  <script src="brand-register.js" defer></script>
    Works with any <form> that contains an <input type="email"> and a submit button. */
 (function () {
-  var API_URL  = 'https://dev-ds-api.asort.com/api/v1/d/krayou/register'; // switch to the prod URL when you go live
+  var API_URL  = 'https://prod-ds-api.asort.com/api/v1/d/krayou/register'; // switch to the prod URL when you go live
   var API_AUTH = 'ZXBsOmltQDEyMyM=';
 
   function setMessage(form, text, ok) {
